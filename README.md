@@ -26,7 +26,7 @@ cd GH_ApiSupply
 ```bash
 docker compose up --build
 ```
-## Caso não esteja com o docker instalado.
+## Caso não esteja com o docker instalado:
 ### Windows -> https://docs.docker.com/desktop/setup/install/windows-install/  
 - Obs: Já inclui o Docker Compose instalado.
 ### Linux -> https://docs.docker.com/engine/install/ubuntu/ 
