@@ -10,40 +10,48 @@
 - Docker & Docker Compose
 
 ## Pré requisitos:
-### DOCKER & DOCKER COMPOSE
+ - Docker
+ - Docker Compose
+ - Java 19
 
 ## Instruções de como rodar o projeto:
-
+- Clonar o repositório:
 ```bash
 git clone https://github.com/starktk/GH_ApiSupply
 ```
 ```bash
 cd GH_ApiSupply
 ```
+- Buildar os containers e inicializar
 ```bash
 docker compose up --build
 ```
 ## Caso não esteja com o docker instalado.
-### Windows -> https://docs.docker.com/desktop/setup/install/windows-install/
-### Linux -> https://docs.docker.com/engine/install/ubuntu/
+### Windows -> https://docs.docker.com/desktop/setup/install/windows-install/  
+- Obs: Já inclui o Docker Compose instalado.
+### Linux -> https://docs.docker.com/engine/install/ubuntu/ 
+- Obs: O Docker Compose já estará disponível como plugin (docker compose).
+- verificando instalação
+```bash
+docker --version
+```
+```bash
+docker compose version
+```
 
-# Se preferir rodar em segundo plano:
+- Se preferir rodar em segundo plano:
 ```bash
 docker compose up -d --build
 ```
-## Verificando se os containers estão rodando:
+- Verificando se os containers estão rodando:
 ```bash
 docker compose ps
 ```
-## Verificando se os containers estão rodando:
-```bash
-docker compose ps
-```
-## Parando os containers
+- Parando os containers
 ```bash
 docker compose stop
 ```
-## Para acessar EndPoints da API utilizar as seguinte urls após inicializar o projeto:
+## Para acessar EndPoints da API utilizar a seguinte url após inicializar o projeto:
  - http://localhost:8084
 ## Observações:
 - O projeto está configurado para MongoDB local via container.
