@@ -6,11 +6,11 @@
 ## Tecnologias utilizadas:
 - Java 19
 - Spring
-- MongoDB Atlas
+- MongoDB
+- Docker & Docker Compose
 
 ## Pré requisitos:
-### JAVA 19
-### DOCKER
+### DOCKER & DOCKER COMPOSE
 
 ## Instruções de como rodar o projeto:
 
@@ -21,20 +21,32 @@ git clone https://github.com/starktk/GH_ApiSupply
 cd GH_ApiSupply
 ```
 ```bash
-docker --Version
+docker compose up --build
 ```
 ## Caso não esteja com o docker instalado.
 ### Windows -> https://docs.docker.com/desktop/setup/install/windows-install/
 ### Linux -> https://docs.docker.com/engine/install/ubuntu/
 
+# Se preferir rodar em segundo plano:
 ```bash
-docker build -t gh-api-supply
+docker compose up -d --build
 ```
+## Verificando se os containers estão rodando:
 ```bash
-docker run -p 8084:8084 gh-api-supply
+docker compose ps
+```
+## Verificando se os containers estão rodando:
+```bash
+docker compose ps
+```
+## Parando os containers
+```bash
+docker compose stop
 ```
 ## Para acessar EndPoints da API utilizar as seguinte urls após inicializar o projeto:
  - http://localhost:8084
- - https://ghand-backend-production.up.railway.app
+## Observações:
+- O projeto está configurado para MongoDB local via container.
+- Caso queira alterar porta ou variáveis, edite o arquivo docker-compose.yml.
 
 ## Desenvolvido por: Raul Rodrigues
