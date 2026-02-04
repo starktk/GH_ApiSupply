@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+
+  mongo:
+    image: mongo:7
+    container_name: ghandb-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  api:
+    build: .
+    container_name: ghandb-api
+    ports:
+      - "8084:8084"
+    depends_on:
+      - mongo
+    environment:
+      SPRING_DATA_MONGODB_HOST: mongo
+      SPRING_DATA_MONGODB_PORT: 27017
+      SPRING_DATA_MONGODB_DATABASE: GH
+
+volumes:
+  mongo_data:
